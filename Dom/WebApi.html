@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Toggle Play/pause Animation</h1>
+    <div
+    class="animated-element"
+    style="width:100px; height:100px;
+    background-color: green">
+
+    </div>
+    <button>Toggle Play/pause</button>
+    <p id="message"></p>
+    <script>
+     let animation;
+     document.addEventListener("DOMContentLoaded",function(){
+        const element = document.querySelector(".animated-element");
+        animation.pause();
+        animation.onfinish =()=>{
+            document.getElementById("message").textContent="Animated finished";
+        }
+
+     }
+    )
+  function togglePlayPause(){
+    if(animation.playState ==="running"){
+        animation.pause();
+        document.getElementById("message").textContent="Animation finished!";
+    } else{
+        animation.play();
+        document.getElementById("message").textContent= "Animation playing";
+        
+    }
+  }
+   
+    
+ 
+    </script>
+</body>
+</html>
