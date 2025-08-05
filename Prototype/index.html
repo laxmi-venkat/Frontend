@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car = {
+            wheels:4,
+            drive:function(){
+                console.log("The car is driving");
+
+            }
+        };
+        let sportsCar ={
+            speed: 200,
+        }
+        sportsCar._proto__ = car;
+
+        console.log(sportsCar);
+
+        sportsCar.drive();
+        console.log(sportsCar.wheels);
+
+        console.log(sportsCar.wheels);
+        console.log(sportsCar.speed);
+
+    </script>
+</body>
+</html>

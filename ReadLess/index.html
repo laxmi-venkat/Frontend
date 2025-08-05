@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>
+       Lorem ipsum  </h1>
+    <p>
+    Lorem ipsum, dolor
+<span id="dots"></span>
+    sit amet consectetur adipisicing elit. Eaque ipsum <span id="more">
+ doloribus ipsa recusandae corporis at natus odio dolor maiores cupiditate distinctio harum fugit, perspiciatis tempora commodi praesentium. Animi, consectetur aliquid!</span>
+    </p>
+    <button type="button" id="read" onclick="read()">More</button>
+    <script type="text/javascript">
+        var i =0;
+        function read(){
+            if(!i){
+               document.getElementById("more").style.display=" inline";
+                document.getElementById("dots").style.display="none";
+                document.getElementById("read").innerHTML ="Read less";
+                i=1; 
+
+            } else{
+ document.getElementById("more").style.display="none";
+                document.getElementById("dots").style.display="none";
+                document.getElementById("read").style.display=innerHTML ="Read more";
+                i=0; 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<h1>jQuery Ajax Example</h1>
+<button onclick="jqueryAjax()">Make Request</button>
+<pre id="result4"></pre>
+<script>
+  function jqueryAjax() {
+    $.ajax({
+      url: 'https://jsonplaceholder.typicode.com/users/7',
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        var formattedData = JSON.stringify(data, null, 2);
+        document.getElementById('result4').innerText = 'jQuery Ajax:\n' + formattedData;
+      },
+      error: function (xhr, status, error) {
+        document.getElementById('result4').innerText = 'jQuery Ajax Error: ' + error;
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>Click the following button , you will be redirected to home page.</p>
+<form>
+    <input type="button" value="Redirect Me" onclick="redirect()">
+</form>
+<body>
+    <script type="text/javascript">
+        var browsername = navigator.appName;
+        if(browsername=="Netscape"){
+           window.location="https://www.w3docs.com/learn-javascript/word-boundary-b.html";
+        } else if(browsername=="microsoft internet Explorer"){
+            window.location="https://www.tutorialspoint.com/articles/category/Javascript";
+
+        } else{
+            window.location ="https://www.tutorialspoint.com/";
+        }
+    </script>
+</body>
+</html>

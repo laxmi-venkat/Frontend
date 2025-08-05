@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    navigator.getBattery().then(function(battery){
+        function updateTimeRemaining(){
+            let time = battery.dischargingTime;
+            if(battery.chargingTime!== Infinity){
+                time = battery.dischargingTime;
+                document.getElementById('timeRemaining').textContent=`Charging,time left: ${time/3600} hours`;
+
+            }else if (time===Infinity){
+                document.getElementById('timeRemaining').textContent = 'Plugged in not charging'
+            }  else{
+                document.getElementById('timeRemianing').textContent =`Time remaining: ${time/3600} hours`;
+            }
+        }
+        updateTimeRemaining();
+        battery.addEventListener('chargingchange',updateTimeRemaining);
+        battery.addEventListener('levelchange',updateTimeRemaining);
+        battery.addEventListener('chargingtimechange',updateTimeRemaing)
+        battery.addEventListener('dischargingtimechange',updateTimeRemaining);
+    })
+   
+</script>
+</body>
+</html>
